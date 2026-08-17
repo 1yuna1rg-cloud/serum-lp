@@ -511,6 +511,8 @@ max-width: 280px;
 }
 
 
+
+
 /* section ===================================== */
 
 section {
@@ -529,6 +531,16 @@ border-bottom: 1px solid #d8b46c;
 .card:last-child {
     border-bottom: none;
 }
+
+
+/* worry ===================================== */
+
+.worry-box {
+  padding: 15px;
+  font-size: 20px;
+}
+
+
 
 
 
