@@ -39,7 +39,7 @@ html {
 }
 
 .header-nav ul li {
-  font-size: clamp(16px, 0.78vw + 10.02px, 20px);
+  font-size: clamp(17px, 0.78vw + 10.02px, 20px);
   padding: 10px 15px;
 }
 
@@ -248,32 +248,32 @@ section {
   margin-top: 100px;
 }
 
-/* ingredient ===================================== */
-#ingredient {
+/* actives ===================================== */
+#actives {
   background-color: rgb(255, 251, 245);
   margin-bottom: 60px;
 }
 
-.ingredient-wrap {
+.actives-wrap {
     display:flex;
 }
 
-.ingredient-box {
+.actives-box {
    flex:3;
    display:flex;
 }
 
-.ingredient-box img {
+.actives-box img {
   border-radius: 50%;
   padding: 15px;
   margin-bottom: 20px;
 }
 
-.ingredient-image{
+.actives-image{
     flex:1.2;
 }
 
-.ingredient-image img {
+.actives-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -451,15 +451,156 @@ max-width: 280px;
   
   /* header ===================================== */
 
+.header-wrap {
+  display: block;
+}
+
 .header-image {
     padding: 12px 16px;
   }
+
+.header-nav ul{
+  justify-content: flex-start;
+}
+
 
 .header-nav ul li {
   padding: 10px 12px;
 }
 
 
+/* home ===================================== */
+
+#home {
+  height: 60vh;
+}
+
+.home-box {
+  justify-content: center;
+  flex: 2;
+  height: fit-content;
+  gap: 20px;
+  padding: 40px 0 0 30px;
+}
+
+.home-box h1 {
+  font-size: clamp(25px, 5.226vw + 4.92px, 45px);
+}
+
+.home-catch {
+  font-size: clamp(16px, 2.924vw + 2.57px, 25px);
+}
+
+.line {
+    width: 200px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.btn {
+  padding: 5px;
+  font-size: 20px;
+}
+
+.ms-image {
+  flex: 1;
+  max-width: 200px;   /* お好みの大きさに調整してください */
+}
+
+
+/* section ===================================== */
+
+section {
+  padding: 100px 10px;
+}
+
+.section-title {
+  font-size: 30px;
+}
+
+.card {
+  border-right: none;
+border-bottom: 1px solid #d8b46c;
+}
+
+.card:last-child {
+    border-bottom: none;
+}
+
+
+
+/* about ===================================== */
+
+.about-box {
+  display: block;
+  margin-top: 100px;
+}
+
+
+/* actives ===================================== */
+
+.actives-wrap {
+    display:block;
+}
+
+.actives-box {
+   display:block;
+}
+
+
+/* voice ===================================== */
+
+.voice-box {
+  display: block;
+}
+
+.voice-card {
+  margin-bottom: 20px;
+}
+
+/* price ===================================== */
+
+.price-wrap {
+  display: block;
+  align-items: center;
+}
+
+
+.price-list {
+  padding: 10px;
+}
+
+
+.price-row {
+  padding: 16px 0;
+  gap: 20px;   /* 項目名と価格の間隔をここで固定 */
+}
+
+.price-row dt {
+  width: 100px;        /* 項目名の幅を固定(「定期購入価格」が収まる幅) */
+}
+
+
+/* footer ===================================== */
+.footer-inner {
+  padding: 10px;
+}
+
+
+.footer-logo img {
+max-width: 180px;
+}
+
+.footer-wrap {
+  display: block;
+}
+
+.footer-catch {
+  font-size: clamp(20px, 2.457vw + 11.15px, 30px);
+}
 
 
 }
