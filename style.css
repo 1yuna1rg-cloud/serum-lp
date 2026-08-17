@@ -1,0 +1,465 @@
+@charset "UTF-8";
+
+/* html ===================================== */
+html {
+  scroll-behavior: smooth;
+  font-family: "Noto Serif JP", serif;
+  color: #4A352A;
+}
+
+
+/* header ===================================== */
+#header {
+  background-color: rgba(255, 255, 255, 0.706);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-image {
+ padding: 20px;
+}
+
+.header-image img {
+  width: auto;
+  height: clamp(22px, 4vw, 30px);
+}
+
+.header-nav ul{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-nav ul li {
+  font-size: clamp(16px, 0.78vw + 10.02px, 20px);
+  padding: 10px 15px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.header-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: #CFA15C;
+  transition: width 0.3s ease;
+}
+
+.header-nav a:hover::after {
+  width: 100%;
+}
+
+/* home ===================================== */
+#home {
+  width: 100%;
+  height: 100vh;
+  background: url(images/fv-bg2.png) center / cover no-repeat;
+  position: relative;
+  overflow: hidden;
+  padding-top: 90px;
+}
+
+.home-wrap {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.home-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start; /* ボタンが横幅いっぱいに広がるのを防ぐ */
+  padding: 50px 0;
+}
+
+.home-box h1 {
+  font-size: clamp(45px, 4.2vw + 12.8px, 80px);
+  line-height: 1.3;
+}
+
+.home-catch {
+  font-size: clamp(25px, 2.924vw + 2.57px, 40px);
+}
+
+.line {
+    width: 250px;
+    height: 1px;
+    background: #c8b08a;
+}
+
+.description {
+  font-size: 25px;
+  line-height: 2.0;
+}
+
+.btn {
+  background: #ed9f39;
+  background: linear-gradient(90deg,rgba(237, 159, 57, 1) 0%, rgba(255, 192, 84, 1) 50%, rgba(255, 215, 145, 1) 100%);
+  padding: 7px;
+  font-size: 25px;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* 追加 */
+}
+
+.btn:hover {
+  transform: scale(1.05);   /* 少し拡大 */
+  box-shadow: 0 5px 15px rgba(237, 159, 57, 0.4);  /* ふわっと影をつける */
+}
+
+.ms-image {
+  width: 250px;   /* お好みの大きさに調整してください */
+}
+
+.ms-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* section ===================================== */
+
+section {
+  padding: 80px 20px;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+}
+
+.card-image img {
+  width: 150px;
+  height: auto;
+}
+
+.section-title {
+  position: relative;
+  font-size: 40px;
+  padding-bottom: 20px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background: #CFA15C;
+}
+
+.card {
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid #d8b46c;
+}
+
+.card:last-child {
+    border-right: none;
+}
+
+.card-inner {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: clamp(16px, 1.75vw + 2.5px, 25px);
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.card-text {
+  font-size: clamp(12px, 1.6vw, 16px);
+  text-wrap: pretty;
+  line-height: 1.6;
+}
+
+/* worry ===================================== */
+
+#worry {
+  background-color: rgb(255, 251, 245);
+}
+
+.worry-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px;
+  font-size: 25px;
+  gap: 30px;
+}
+
+.worry-arrow {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 12px solid #7a5c3e;
+  margin: 20px auto;
+}
+
+.worry-lead {
+  max-width: 1280px;
+  margin: 0 auto;
+ background: url(images/dropper.png) center right / contain no-repeat;
+ text-align: center;
+ padding: 60px 0;
+ font-size: 35px;
+ font-weight: 600;
+ line-height: 2.0;
+
+}
+
+.worry-lead span {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+
+/* about ===================================== */
+#about {
+  margin-bottom: 60px;
+}
+
+.about-box {
+  display: flex;
+  margin-top: 100px;
+}
+
+/* ingredient ===================================== */
+#ingredient {
+  background-color: rgb(255, 251, 245);
+  margin-bottom: 60px;
+}
+
+.ingredient-wrap {
+    display:flex;
+}
+
+.ingredient-box {
+   flex:3;
+   display:flex;
+}
+
+.ingredient-box img {
+  border-radius: 50%;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.ingredient-image{
+    flex:1.2;
+}
+
+.ingredient-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* voice ===================================== */
+#voice {
+  background-color: #f7f0e8; /* クリーム色の背景 */
+  margin-bottom: 60px;
+}
+
+.voice-box {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.voice-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  padding: 32px 24px;
+  flex: 1;
+  text-align: center;
+}
+
+.voice-stars {
+  color: #e0a838; /* オレンジ系の星の色 */
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.voice-title {
+  color: #b8860b; /* タイトルの茶色っぽいオレンジ */
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.voice-text {
+  font-size: 13px;
+  text-wrap: pretty;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.voice-person {
+  font-size: 13px;
+  color: #999;
+}
+
+
+/* price ===================================== */
+#price {
+  background: url(images/price-bg.png) center / cover no-repeat;
+  position: relative;
+}
+
+.price-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.price-box {
+   flex:1.3;
+   display: flex;
+   justify-content: center;  /* .price-box内で.price-listを中央寄せ */
+}
+
+.price-list {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  background-color: rgba(240, 255, 255, 0.419);
+  padding: 15px 0 35px 30px;
+}
+
+.price-row {
+  display: flex;             /* dt/ddを横並びにする */
+  padding: 18px 0;
+  border-bottom: 1px solid #ddd;
+  gap: 45px;   /* 項目名と価格の間隔をここで固定 */
+}
+
+.price-row dt {
+  font-size: clamp(16px, 0.975vw + 8.52px, 21px);
+  text-wrap: pretty;
+  line-height: 1.6;
+  font-weight: bold;
+  width: 140px;        /* 項目名の幅を固定(「定期購入価格」が収まる幅) */
+  flex-shrink: 0;       /* 縮まないようにする */
+}
+
+.price-row dd {
+  font-size: clamp(12px, 1.56vw + 0.04px, 20px);
+  text-wrap: pretty;
+  line-height: 1.6;
+  display: flex;        /* 金額とバッジを横並びにする */
+  text-align: center;
+  gap: 10px;             /* 金額とバッジの間隔 */
+}
+
+.badge {
+  background: linear-gradient(90deg, rgba(237, 159, 57, 1) 0%, rgba(255, 192, 84, 1) 50%, rgb(254, 203, 114) 100%);
+  color: #fff;
+  font-size: clamp(11px, 0.585vw + 6.51px, 14px);
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.price-image {
+  flex: 1;
+}
+
+.price-image img {
+  width: 100%;
+}
+
+.price-left {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  pointer-events: none; /* 装飾画像なのでクリックを邪魔しない */
+}
+
+.price-left img {
+  width: 200px;
+  opacity: 0.7;
+}
+
+/* footer ===================================== */
+
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.footer-logo {
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+max-width: 280px;
+}
+
+
+.footer-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;      /* 追加: 縦位置を揃える */
+  gap: 40px;
+}
+
+.footer-catch {
+  font-size: clamp(30px, 1.95vw + 15.04px, 40px);
+  white-space: nowrap;      /* ← これがポイント。1文字ずつの折り返しを防ぐ */
+}
+
+.footer-btn {
+  flex: 0 0 auto;           /* "1s"のタイポを修正し、中身の幅だけ確保 */
+  width: auto;              /* width:100%を削除(ボタンが伸びきってしまうため) */
+}
+
+
+
+@media (max-width: 767px) {
+  
+  /* header ===================================== */
+
+.header-image {
+    padding: 12px 16px;
+  }
+
+.header-nav ul li {
+  padding: 10px 12px;
+}
+
+
+
+
+}
