@@ -30,7 +30,7 @@ html {
 
 .header-image img {
   width: auto;
-  height: clamp(22px, 4vw, 30px);
+  height: clamp(22px, 4vw, 35px);
 }
 
 .header-nav ul{
@@ -180,18 +180,15 @@ section {
     border-right: none;
 }
 
-.card-inner {
-  padding: 20px;
-}
-
 .card-title {
-  font-size: clamp(16px, 1.75vw + 2.5px, 25px);
+  font-size: clamp(18px, 1.75vw + 2.5px, 25px);
   font-weight: 600;
   margin-bottom: 30px;
 }
 
 .card-text {
-  font-size: clamp(12px, 1.6vw, 16px);
+  padding: 15px;
+  font-size: 16px;
   text-wrap: pretty;
   line-height: 1.6;
 }
@@ -208,6 +205,7 @@ section {
   text-align: center;
   padding: 30px;
   font-size: 25px;
+  text-wrap: pretty;
   gap: 30px;
 }
 
@@ -463,24 +461,25 @@ max-width: 280px;
   justify-content: flex-start;
 }
 
-
 .header-nav ul li {
+  font-size: clamp(15px, 0.78vw + 10.02px, 20px);
   padding: 10px 12px;
 }
-
 
 /* home ===================================== */
 
 #home {
-  height: 60vh;
+  height: 55vh;
 }
 
 .home-box {
   justify-content: center;
+  align-items: flex-start;  /* 中の要素(h1, pなど)は左揃えのまま */
   flex: 2;
   height: fit-content;
   gap: 20px;
-  padding: 40px 0 0 30px;
+  padding: 15px;
+  width: fit-content;       /* ブロック自体の幅を中身に合わせる */
 }
 
 .home-box h1 {
@@ -496,13 +495,13 @@ max-width: 280px;
 }
 
 .description {
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.5;
 }
 
 .btn {
   padding: 5px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .ms-image {
@@ -516,16 +515,50 @@ max-width: 280px;
 /* section ===================================== */
 
 section {
-  padding: 100px 10px;
+  padding: 100px 10px 20px 10px;
 }
 
 .section-title {
-  font-size: 30px;
+  font-size: clamp(22px, 1.966vw + 14.92px, 30px);
+}
+
+.card-image {
+  margin-top: 40px;
+}
+
+
+.card-image img {
+  width: 100px;
+  height: auto;
 }
 
 .card {
   border-right: none;
-border-bottom: 1px solid #d8b46c;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px; /* お好みの長さに調整 */
+  border-bottom: 1px solid #d8b46c;
+}
+
+.card:last-child::after {
+  content: none;
+}
+
+.card-inner {
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 18px;
+  margin-bottom: 0;
 }
 
 .card:last-child {
@@ -540,19 +573,36 @@ border-bottom: 1px solid #d8b46c;
   font-size: 20px;
 }
 
+.worry-lead {
+ padding: 30px 0;
+ font-size: clamp(20px, 1.229vw + 15.58px, 25px);
+}
+
+.worry-lead span {
+  font-size: clamp(25px, 5.405vw + 8.54px, 50px);
+  font-weight: 600;
+}
+
 
 
 
 
 /* about ===================================== */
+#about {
+  margin-bottom: 0;
+}
+
 
 .about-box {
   display: block;
-  margin-top: 100px;
+  margin-top: 30px;
 }
 
 
 /* actives ===================================== */
+#actives {
+  margin-bottom: 20px;
+}
 
 .actives-wrap {
     display:block;
@@ -562,8 +612,19 @@ border-bottom: 1px solid #d8b46c;
    display:block;
 }
 
+.actives-image {
+  margin-bottom: 0;
+}
+
+
 
 /* voice ===================================== */
+#voice {
+  margin-bottom: 20px;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
 
 .voice-box {
   display: block;
@@ -582,9 +643,9 @@ border-bottom: 1px solid #d8b46c;
 
 
 .price-list {
+  max-width: 450px;
   padding: 10px;
 }
-
 
 .price-row {
   padding: 16px 0;
@@ -595,8 +656,8 @@ border-bottom: 1px solid #d8b46c;
   width: 100px;        /* 項目名の幅を固定(「定期購入価格」が収まる幅) */
 }
 
-
 /* footer ===================================== */
+
 .footer-inner {
   padding: 10px;
 }
@@ -612,6 +673,10 @@ max-width: 180px;
 
 .footer-catch {
   font-size: clamp(20px, 2.457vw + 11.15px, 30px);
+}
+
+.footer-btn {
+  margin: 20px auto;
 }
 
 
