@@ -86,7 +86,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: flex-start; /* ボタンが横幅いっぱいに広がるのを防ぐ */
+  align-items: flex-start;
   padding: 50px 0;
 }
 
@@ -117,16 +117,16 @@ html {
   font-size: 25px;
   font-weight: 700;
   border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* 追加 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
-  transform: scale(1.05);   /* 少し拡大 */
-  box-shadow: 0 5px 15px rgba(237, 159, 57, 0.4);  /* ふわっと影をつける */
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(237, 159, 57, 0.4);
 }
 
 .ms-image {
-  width: 250px;   /* お好みの大きさに調整してください */
+  width: 250px;
 }
 
 .ms-image img {
@@ -284,12 +284,12 @@ section {
 #actives .btn {
   display: block;
   margin: 40px auto 0;
-  width: fit-content; /* または具体的な幅を指定 */
+  width: fit-content;
 }
 
 /* voice ===================================== */
 #voice {
-  background-color: #f7f0e8; /* クリーム色の背景 */
+  background-color: #f7f0e8;
   margin-bottom: 60px;
 }
 
@@ -311,14 +311,14 @@ section {
 }
 
 .voice-stars {
-  color: #e0a838; /* オレンジ系の星の色 */
+  color: #e0a838;
   font-size: 18px;
   letter-spacing: 2px;
   margin-bottom: 16px;
 }
 
 .voice-title {
-  color: #b8860b; /* タイトルの茶色っぽいオレンジ */
+  color: #b8860b;
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 16px;
@@ -352,7 +352,7 @@ section {
 .price-box {
    flex:1.3;
    display: flex;
-   justify-content: center;  /* .price-box内で.price-listを中央寄せ */
+   justify-content: center;
 }
 
 .price-list {
@@ -364,10 +364,10 @@ section {
 }
 
 .price-row {
-  display: flex;             /* dt/ddを横並びにする */
+  display: flex;
   padding: 18px 0;
   border-bottom: 1px solid #ddd;
-  gap: 45px;   /* 項目名と価格の間隔をここで固定 */
+  gap: 45px;
 }
 
 .price-row dt {
@@ -375,17 +375,17 @@ section {
   text-wrap: pretty;
   line-height: 1.6;
   font-weight: bold;
-  width: 140px;        /* 項目名の幅を固定(「定期購入価格」が収まる幅) */
-  flex-shrink: 0;       /* 縮まないようにする */
+  width: 140px;
+  flex-shrink: 0;
 }
 
 .price-row dd {
   font-size: clamp(12px, 1.56vw + 0.04px, 20px);
   text-wrap: pretty;
   line-height: 1.6;
-  display: flex;        /* 金額とバッジを横並びにする */
+  display: flex;
   text-align: center;
-  gap: 10px;             /* 金額とバッジの間隔 */
+  gap: 10px;
 }
 
 .badge {
@@ -410,7 +410,7 @@ section {
   position: absolute;
   right: 0;
   bottom: 0;
-  pointer-events: none; /* 装飾画像なのでクリックを邪魔しない */
+  pointer-events: none;
 }
 
 .price-left img {
@@ -439,18 +439,18 @@ max-width: 280px;
 .footer-wrap {
   display: flex;
   justify-content: center;
-  align-items: center;      /* 追加: 縦位置を揃える */
+  align-items: center;
   gap: 40px;
 }
 
 .footer-catch {
   font-size: clamp(30px, 1.95vw + 15.04px, 40px);
-  white-space: nowrap;      /* ← これがポイント。1文字ずつの折り返しを防ぐ */
+  white-space: nowrap;
 }
 
 .footer-btn {
-  flex: 0 0 auto;           /* "1s"のタイポを修正し、中身の幅だけ確保 */
-  width: auto;              /* width:100%を削除(ボタンが伸びきってしまうため) */
+  flex: 0 0 auto;
+  width: auto;
 }
 
 
@@ -484,12 +484,12 @@ max-width: 280px;
 
 .home-box {
   justify-content: center;
-  align-items: flex-start;  /* 中の要素(h1, pなど)は左揃えのまま */
+  align-items: flex-start;
   flex: 2;
   height: fit-content;
   gap: 20px;
   padding: 15px;
-  width: fit-content;       /* ブロック自体の幅を中身に合わせる */
+  width: fit-content;
 }
 
 .home-box h1 {
@@ -516,7 +516,7 @@ max-width: 280px;
 
 .ms-image {
   flex: 1;
-  max-width: 200px;   /* お好みの大きさに調整してください */
+  max-width: 200px;
 }
 
 
@@ -554,7 +554,7 @@ section {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 250px; /* お好みの長さに調整 */
+  width: 250px;
   border-bottom: 1px solid #d8b46c;
 }
 
@@ -675,11 +675,11 @@ section {
 
 .price-row {
   padding: 16px 0;
-  gap: 20px;   /* 項目名と価格の間隔をここで固定 */
+  gap: 20px;
 }
 
 .price-row dt {
-  width: 100px;        /* 項目名の幅を固定(「定期購入価格」が収まる幅) */
+  width: 100px;
 }
 
 /* footer ===================================== */
